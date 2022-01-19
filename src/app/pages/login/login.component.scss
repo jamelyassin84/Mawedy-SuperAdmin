@@ -23,12 +23,16 @@ h1 {
 }
 
 .login-container-wrapper {
-	width: 717px;
-	background: #ffffff 0% 0% no-repeat padding-box;
+	width: 600px;
+	background: var(--bg1) 0% 0% no-repeat padding-box;
 	box-shadow: 0px 3px 6px #00000029;
 	border-radius: 15px;
 	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	padding: 90px 100px;
+	min-height: 650px;
 }
 
 .container {
@@ -37,7 +41,7 @@ h1 {
 }
 
 .form-group {
-	margin-bottom: 45px;
+	margin-bottom: 15px;
 }
 
 .btn {
@@ -45,12 +49,47 @@ h1 {
 	background: #00b074;
 	color: white;
 	border-radius: 15px;
-	height: 66px;
-	font-size: 23px;
+	font-size: 1.2rem;
+	height: 50px;
+	transition: 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
+
+.isProcessing {
+	.btn {
+		width: 50px !important;
+		border-radius: 50%;
+		align-self: center;
+		margin: auto;
+		background: var(--bg);
+		border: none;
+		margin-top: calc(83px - 45px);
+		padding: 0 !important;
+	}
+}
+.btn :focus {
+	outline: 0 !important;
+}
+button:focus {
+	outline: 0 !important;
+}
+.btn :active {
+	font-size: 0.2rem;
+}
+.isComplete {
+	.btn {
+		width: 150px !important;
+		border-radius: 30px;
+		margin: auto;
+		opacity: 1;
+		font-size: 1.5rem;
+		margin-top: calc(83px - 45px);
+	}
+}
+
 input {
 	height: 66px;
 	border-radius: 10px;
+	border: 1px solid #cad0db !important;
 }
 
 a {
@@ -60,6 +99,7 @@ a {
 	font-weight: 500;
 	align-self: center;
 	margin-top: 33px;
+	cursor: pointer;
 }
 
 footer {

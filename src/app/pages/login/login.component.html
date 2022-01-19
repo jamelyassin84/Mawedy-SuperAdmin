@@ -5,18 +5,41 @@
 	<content class="row">
 		<div class="col-md-12">
 			<div class="container">
-				<h1>Master Admin Panel</h1>
 				<div class="login-container-wrapper">
+					<h1>Master Admin Panel</h1>
 					<div class="form-group">
 						<label>Username</label>
 						<input type="text" class="form-control" />
 					</div>
 					<div class="form-group">
 						<label>Password</label>
-						<input type="password" class="form-control" />
+						<input
+							(keyup.enter)="login()"
+							type="password"
+							class="form-control"
+						/>
 					</div>
-					<div class="d-flex">
-						<button class="btn primary-button w-100">Login</button>
+
+					<div
+						(click)="login()"
+						[class.isProcessing]="isProcessing === true"
+						[class.isComplete]="isProcessing === 'complete'"
+						class="d-flex"
+					>
+						<button class="btn primary-button w-100">
+							<span *ngIf="isProcessing === 'complete'"
+								><i class="lni lni-checkmark"></i
+							></span>
+							<span *ngIf="!isProcessing"> Log-in </span>
+
+							<div
+								*ngIf="isProcessing === true"
+								class="spinner-border text-success"
+								role="status"
+							>
+								<span class="sr-only">Loading...</span>
+							</div>
+						</button>
 					</div>
 					<div class="d-flex w-10">
 						<a class="link text-center w-100">Forgot Password?</a>

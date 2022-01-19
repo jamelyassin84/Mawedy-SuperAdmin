@@ -1,90 +1,99 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('./assets/styles/root.scss');
+
+@font-face {
+	font-family: 'bold';
+	src: url('./assets/fonts/avenir-heavy.ttf');
+}
+
+@font-face {
+	font-family: 'normal';
+	src: url('./assets/fonts/avenir.ttf');
+}
 
 html {
-  --accent: #00b074;
+	--accent: #00b074;
 }
 
-html[theme="dark"] {
-  --bg1: #1e1e1e;
-  --bg2: #212121;
-  --bg3: #171717;
-  --bg4: #212121c2;
-  --bg5: #21212175;
-  --loginNav: #ac8585;
-  --loginNavColor: #00b074;
-  --searchInput: #3a3b3c;
-  --input: #3a3b3c;
-  --color1: white;
-  --color2: #a6a6a6;
-  --color3: gray;
-  --border1: #282828;
-  --border2: #282828;
-  --inputBorder: #2c333a;
-  --shadow1: #02110929;
-  --shadow2: #06b98363;
-  --shadow3: #02110929;
-  --shadow4: #2b2c2c;
-  --sidebarActiveBG: #282828;
-  --page: #1e1e1e;
-  --toolbar: #242526;
-  --toolbarShadow: 0px 0px 315px var(--accent);
-  --pageContent: #171717;
-  --table: transparent;
-  --thColor: white;
-  --trColor: #878787;
-  --trBg2: #1e1e1ea2;
-  --modalBackdrop: #021b14ad;
-  --modalHeader: #1e1e1e;
-  --modalFooter: #171717;
-  --onlyLight: none;
-  --onlyDark: block;
-  --calendar1: #3a00f834;
-  --calendar2: #f309c034;
-  --calendar3: #2ff1d734;
-  --active1: #c3cdde57;
-  --tabContainer: #0feb9e13;
-  --disabled: #cfdae81c;
+html[theme='dark'] {
+	--bg1: #1e1e1e;
+	--bg2: #212121;
+	--bg3: #171717;
+	--bg4: #212121c2;
+	--bg5: #21212175;
+	--loginNav: #ac8585;
+	--loginNavColor: #00b074;
+	--searchInput: #3a3b3c;
+	--input: #3a3b3c;
+	--color1: white;
+	--color2: #a6a6a6;
+	--color3: gray;
+	--border1: #282828;
+	--border2: #282828;
+	--inputBorder: #2c333a;
+	--shadow1: #02110929;
+	--shadow2: #06b98363;
+	--shadow3: #02110929;
+	--shadow4: #2b2c2c;
+	--sidebarActiveBG: #282828;
+	--page: #1e1e1e;
+	--toolbar: #242526;
+	--toolbarShadow: 0px 0px 315px var(--accent);
+	--pageContent: #171717;
+	--table: transparent;
+	--thColor: white;
+	--trColor: #878787;
+	--trBg2: #1e1e1ea2;
+	--modalBackdrop: #021b14ad;
+	--modalHeader: #1e1e1e;
+	--modalFooter: #171717;
+	--onlyLight: none;
+	--onlyDark: block;
+	--calendar1: #3a00f834;
+	--calendar2: #f309c034;
+	--calendar3: #2ff1d734;
+	--active1: #c3cdde57;
+	--tabContainer: #0feb9e13;
+	--disabled: #cfdae81c;
 }
 
-html[theme="light"] {
-  --bg1: white;
-  --bg2: #f4f6f8;
-  --bg3: white;
-  --bg4: #f7f8fa;
-  --bg5: #e4e6e8;
-  --loginNav: white;
-  --loginNavColor: #00b074;
-  --searchInput: #f4f6f8;
-  --input: white;
-  --color1: #0a2440;
-  --color2: #6f7d8f;
-  --color3: gray;
-  --border1: #e3ebf5b3;
-  --border2: #f7f8fa;
-  --inputBorder: #dee2e6;
-  --shadow1: #00000029;
-  --shadow2: #00000063;
-  --shadow3: #e3ebf5b3;
-  --shadow4: #eff2f2;
-  --sidebarActiveBG: #ebf9f4;
-  --page: #f5f6fa;
-  --toolbar: white;
-  --toolbarShadow: none;
-  --pageContent: white;
-  --table: white;
-  --thColor: #6f7d8f;
-  --trColor: #0a2440;
-  --trBg2: #f7f8fa;
-  --modalBackdrop: #0a2440b2;
-  --modalHeader: #f7f8fa;
-  --modalFooter: white;
-  --onlyLight: block;
-  --onlyDark: none;
-  --calendar1: #e5eff7;
-  --calendar2: #edeaf7;
-  --calendar3: #e9f0f1;
-  --active1: #c3cdde;
-  --tabContainer: #ebf9f4;
-  --disabled: #cfdae8;
+html[theme='light'] {
+	--bg1: white;
+	--bg2: #f4f6f8;
+	--bg3: white;
+	--bg4: #f7f8fa;
+	--bg5: #e4e6e8;
+	--loginNav: white;
+	--loginNavColor: #00b074;
+	--searchInput: #f4f6f8;
+	--input: white;
+	--color1: #0a2440;
+	--color2: #6f7d8f;
+	--color3: gray;
+	--border1: #e3ebf5b3;
+	--border2: #f7f8fa;
+	--inputBorder: #dee2e6;
+	--shadow1: #00000029;
+	--shadow2: #00000063;
+	--shadow3: #e3ebf5b3;
+	--shadow4: #eff2f2;
+	--sidebarActiveBG: #ebf9f4;
+	--page: #f5f6fa;
+	--toolbar: white;
+	--toolbarShadow: none;
+	--pageContent: white;
+	--table: white;
+	--thColor: #6f7d8f;
+	--trColor: #0a2440;
+	--trBg2: #f7f8fa;
+	--modalBackdrop: #0a2440b2;
+	--modalHeader: #f7f8fa;
+	--modalFooter: white;
+	--onlyLight: block;
+	--onlyDark: none;
+	--calendar1: #e5eff7;
+	--calendar2: #edeaf7;
+	--calendar3: #e9f0f1;
+	--active1: #c3cdde;
+	--tabContainer: #ebf9f4;
+	--disabled: #cfdae8;
 }
-// @import url("./app/styles/root.scss");
