@@ -5,10 +5,13 @@ import { BrowserModule } from '@angular/platform-browser'
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
 import { LoginComponent } from './pages/login/login.component'
-import { HomeComponent } from './pages/home/home.component'
+import { HomeComponent } from './pages/home/home.component';
+import { NavbarComponent } from './shared/navbar/navbar.component';
+import { SidbarComponent } from './shared/sidbar/sidbar.component';
+import { ToolbarsComponent } from './components/toolbars/toolbars.component'
 
 @NgModule({
-	declarations: [AppComponent, LoginComponent, HomeComponent],
+	declarations: [AppComponent, LoginComponent, HomeComponent, NavbarComponent, SidbarComponent, ToolbarsComponent],
 	imports: [BrowserModule, AppRoutingModule, RouterModule],
 	providers: [],
 	bootstrap: [AppComponent],

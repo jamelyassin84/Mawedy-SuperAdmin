@@ -1,0 +1,14 @@
+<div class="sidebar">
+	<div
+		(click)="setActiveIcon(nav.name)"
+		*ngFor="let nav of nav"
+		class="item"
+		[class.active]="activeIcon === nav.name"
+		[routerLink]="nav.route"
+	>
+		<span class="icon">
+			<i [class]="nav.icon"></i>
+		</span>
+		<span>{{ nav.name }}</span>
+	</div>
+</div>

@@ -1,5 +1,3 @@
-@import url('./assets/styles/root.scss');
-
 @font-face {
 	font-family: 'bold';
 	src: url('./assets/fonts/avenir-heavy.ttf');
@@ -97,3 +95,4 @@ html[theme='light'] {
 	--tabContainer: #ebf9f4;
 	--disabled: #cfdae8;
 }
+@import url('./assets/styles/root.scss');
