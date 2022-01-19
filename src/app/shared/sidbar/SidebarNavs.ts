@@ -2,17 +2,17 @@ export const SidebarNav: SidebarNavType[] = [
 	{
 		name: 'Dashboard',
 		route: `/home/`,
-		icon: `lni lni-dashboard`,
+		icon: `home`,
 	},
 	{
 		name: 'CRM',
 		route: `/home/`,
-		icon: `lni lni-hospital`,
+		icon: `users`,
 	},
 	{
 		name: 'Inbox',
 		route: `/home/`,
-		icon: `lni lni-comments`,
+		icon: `mail`,
 	},
 ]
 export type SidebarNavType = {
