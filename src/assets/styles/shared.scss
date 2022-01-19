@@ -11,6 +11,7 @@ body {
 	background: var(--page);
 	padding: 30px;
 	min-height: 83vh;
+	width: calc(100vw - 280px);
 }
 
 .page-content {
