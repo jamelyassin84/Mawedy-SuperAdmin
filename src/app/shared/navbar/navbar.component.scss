@@ -11,6 +11,9 @@ nav {
 	position: sticky;
 	top: 0;
 	z-index: 9;
+	i-feather {
+		color: #6d7c8d;
+	}
 	.logo-div {
 		width: 280px;
 		display: flex;
@@ -31,8 +34,7 @@ nav {
 		padding-left: 18px;
 		paint-order: 58px;
 		align-items: center;
-		.search {
-			height: 20px;
+		.search-icon {
 			margin-right: 18px;
 		}
 		input {
@@ -41,6 +43,7 @@ nav {
 			border: none !important;
 			background: transparent;
 			color: #6d7c8d;
+			padding-top: 5px;
 			&:focus {
 				outline: none;
 			}
