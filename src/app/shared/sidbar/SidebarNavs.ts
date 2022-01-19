@@ -6,12 +6,12 @@ export const SidebarNav: SidebarNavType[] = [
 	},
 	{
 		name: 'CRM',
-		route: `/home/`,
+		route: `/home/crm`,
 		icon: `users`,
 	},
 	{
 		name: 'Inbox',
-		route: `/home/`,
+		route: `/home/inbox`,
 		icon: `mail`,
 	},
 ]

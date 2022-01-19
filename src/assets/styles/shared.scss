@@ -132,3 +132,10 @@ option[value=''][disabled] {
 i {
 	font-size: 1.3rem !important;
 }
+
+.card {
+	padding: 33px;
+	box-shadow: 0px 3px 6px #00000029;
+	border-radius: 15px;
+	background: var(--bg1);
+}

@@ -11,7 +11,8 @@ import { AppComponent } from './app.component'
 import { LoginComponent } from './pages/login/login.component'
 import { HomeComponent } from './pages/home/home.component'
 import { NavbarComponent } from './shared/navbar/navbar.component'
-import { SidbarComponent } from './shared/sidbar/sidbar.component'
+import { SidbarComponent } from './shared/sidbar/sidbar.component';
+import { MessageDetailsComponent } from './modules/message-details/message-details.component'
 
 @NgModule({
 	declarations: [
@@ -20,6 +21,7 @@ import { SidbarComponent } from './shared/sidbar/sidbar.component'
 		HomeComponent,
 		NavbarComponent,
 		SidbarComponent,
+  MessageDetailsComponent,
 	],
 	imports: [
 		BrowserModule,

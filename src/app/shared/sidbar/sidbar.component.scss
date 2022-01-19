@@ -18,19 +18,17 @@
 	align-self: center;
 	cursor: pointer;
 	.icon {
-		height: 26px;
 		width: 26px;
 		margin-right: 20px;
 		font-size: 1.2rem;
+		transform: translateY(-5px);
 	}
-	span {
-		margin-top: 5px;
-	}
+
 	margin-top: 1rem;
 	&:hover {
 		border-left: 7px solid #f9ee44;
 	}
-	transition: 0.2s ease-out;
+	transition: 0.2s cubic-bezier(0.1, 0.3, 0.4, 0.99);
 }
 
 .active {
@@ -38,7 +36,6 @@
 		text-align: left;
 		letter-spacing: 0.03px;
 		color: #00b074;
-		text-transform: capitalize;
 		font-weight: 600;
 	}
 	background: var(--sidebarActiveBG) 0% 0% no-repeat padding-box;

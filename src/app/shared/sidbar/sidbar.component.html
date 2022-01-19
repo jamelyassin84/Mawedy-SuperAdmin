@@ -9,6 +9,13 @@
 		<span class="icon">
 			<i-feather [name]="nav.icon"></i-feather>
 		</span>
-		<span>{{ nav.name }}</span>
+		<span
+			>{{ nav.name }}
+			<span
+				*ngIf="nav.name === 'Inbox'"
+				class="badge badge-danger text-white ml-2"
+				>3</span
+			></span
+		>
 	</div>
 </div>
