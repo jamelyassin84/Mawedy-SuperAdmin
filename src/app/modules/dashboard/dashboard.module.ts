@@ -1,3 +1,4 @@
+import { DashboardCircleComponent } from './../../components/utilities/dashboard-circle/dashboard-circle.component'
 import { CRMModule } from './../crm/crm.module'
 
 import { BackToolbarComponent } from './../../components/toolbars/back-toolbar/back-toolbar.component'
@@ -15,6 +16,7 @@ import { AnalyticsComponent } from './analytics/analytics.component'
 		MessageDetailsComponent,
 		DashboardToolbarComponent,
 		BackToolbarComponent,
+		DashboardCircleComponent,
 	],
 	imports: [CommonModule, CRMModule],
 	exports: [
@@ -23,6 +25,7 @@ import { AnalyticsComponent } from './analytics/analytics.component'
 		MessageDetailsComponent,
 		DashboardToolbarComponent,
 		BackToolbarComponent,
+		DashboardCircleComponent,
 	],
 })
 export class DashboardModule {}
