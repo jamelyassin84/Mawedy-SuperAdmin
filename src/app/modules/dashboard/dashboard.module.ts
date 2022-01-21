@@ -10,6 +10,7 @@ import { OverviewComponent } from './overview/overview.component'
 import { AnalyticsComponent } from './analytics/analytics.component'
 import { ClinicRankComponent } from 'src/app/components/utilities/clinic-rank/clinic-rank.component'
 import { ServiceMostSearchComponent } from 'src/app/components/utilities/service-most-search/service-most-search.component'
+import { NgChartsModule } from 'ng2-charts'
 
 @NgModule({
 	declarations: [
@@ -22,7 +23,7 @@ import { ServiceMostSearchComponent } from 'src/app/components/utilities/service
 		ClinicRankComponent,
 		ServiceMostSearchComponent,
 	],
-	imports: [CommonModule, CRMModule],
+	imports: [CommonModule, CRMModule, NgChartsModule],
 	exports: [
 		OverviewComponent,
 		AnalyticsComponent,

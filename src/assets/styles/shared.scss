@@ -10,7 +10,7 @@ body {
 
 .page {
 	background: var(--page);
-	padding: 30px;
+	padding: 64px;
 	min-height: 83vh;
 	width: calc(100vw - 280px);
 }
@@ -137,7 +137,6 @@ i {
 
 .card {
 	padding: 33px;
-	box-shadow: 0px 3px 6px #1d1c1c1f;
 	border-radius: 15px;
 	background: var(--bg1);
 	border: none;
