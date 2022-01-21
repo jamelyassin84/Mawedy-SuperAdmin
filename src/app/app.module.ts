@@ -1,3 +1,5 @@
+import { InboxModule } from './modules/inbox/inbox.module'
+import { CRMModule } from './modules/crm/crm.module'
 import { DashboardModule } from './modules/dashboard/dashboard.module'
 import { IconsModule } from './icons/icons.module'
 import { NgModule } from '@angular/core'
@@ -30,6 +32,8 @@ import { SidbarComponent } from './shared/sidbar/sidbar.component'
 
 		IconsModule,
 		DashboardModule,
+		CRMModule,
+		InboxModule,
 	],
 	providers: [],
 	bootstrap: [AppComponent],

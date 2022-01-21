@@ -1,8 +1,8 @@
-import { InboxToolbarComponent } from './../../components/toolbars/inbox-toolbar/inbox-toolbar.component'
+import { CRMModule } from './../crm/crm.module'
+
 import { BackToolbarComponent } from './../../components/toolbars/back-toolbar/back-toolbar.component'
 import { DashboardToolbarComponent } from './../../components/toolbars/dashboard-toolbar/dashboard-toolbar.component'
 import { MessageDetailsComponent } from './../message-details/message-details.component'
-import { ToolbarsComponent } from '../../shared/toolbars/toolbars.component'
 import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { OverviewComponent } from './overview/overview.component'
@@ -12,21 +12,17 @@ import { AnalyticsComponent } from './analytics/analytics.component'
 	declarations: [
 		OverviewComponent,
 		AnalyticsComponent,
-		ToolbarsComponent,
 		MessageDetailsComponent,
 		DashboardToolbarComponent,
 		BackToolbarComponent,
-		InboxToolbarComponent,
 	],
-	imports: [CommonModule],
+	imports: [CommonModule, CRMModule],
 	exports: [
 		OverviewComponent,
 		AnalyticsComponent,
-		ToolbarsComponent,
 		MessageDetailsComponent,
 		DashboardToolbarComponent,
 		BackToolbarComponent,
-		InboxToolbarComponent,
 	],
 })
 export class DashboardModule {}

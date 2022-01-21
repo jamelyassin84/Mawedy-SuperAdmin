@@ -1,5 +1,5 @@
+import { ToolbarsComponent } from './../../shared/toolbars/toolbars.component'
 import { CrmToolbarComponent } from './../../components/toolbars/crm-toolbar/crm-toolbar.component'
-import { DashboardModule } from './../dashboard/dashboard.module'
 import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { AdminUserListComponent } from './admin-user/admin-user-list/admin-user-list.component'
@@ -16,8 +16,9 @@ import { PremiumUserListComponent } from './premium-user/premium-user-list/premi
 		AppUserDetailsComponent,
 		PremiumUserListComponent,
 		CrmToolbarComponent,
+		ToolbarsComponent,
 	],
-	imports: [CommonModule, DashboardModule],
-	exports: [CrmToolbarComponent],
+	imports: [CommonModule],
+	exports: [CrmToolbarComponent, ToolbarsComponent],
 })
 export class CRMModule {}
