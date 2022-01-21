@@ -8,6 +8,7 @@ import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { OverviewComponent } from './overview/overview.component'
 import { AnalyticsComponent } from './analytics/analytics.component'
+import { ClinicRankComponent } from 'src/app/components/utilities/clinic-rank/clinic-rank.component'
 
 @NgModule({
 	declarations: [
@@ -17,6 +18,7 @@ import { AnalyticsComponent } from './analytics/analytics.component'
 		DashboardToolbarComponent,
 		BackToolbarComponent,
 		DashboardCircleComponent,
+		ClinicRankComponent,
 	],
 	imports: [CommonModule, CRMModule],
 	exports: [
@@ -26,6 +28,7 @@ import { AnalyticsComponent } from './analytics/analytics.component'
 		DashboardToolbarComponent,
 		BackToolbarComponent,
 		DashboardCircleComponent,
+		ClinicRankComponent,
 	],
 })
 export class DashboardModule {}
