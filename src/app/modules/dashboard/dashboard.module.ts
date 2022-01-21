@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common'
 import { OverviewComponent } from './overview/overview.component'
 import { AnalyticsComponent } from './analytics/analytics.component'
 import { ClinicRankComponent } from 'src/app/components/utilities/clinic-rank/clinic-rank.component'
+import { ServiceMostSearchComponent } from 'src/app/components/utilities/service-most-search/service-most-search.component'
 
 @NgModule({
 	declarations: [
@@ -19,6 +20,7 @@ import { ClinicRankComponent } from 'src/app/components/utilities/clinic-rank/cl
 		BackToolbarComponent,
 		DashboardCircleComponent,
 		ClinicRankComponent,
+		ServiceMostSearchComponent,
 	],
 	imports: [CommonModule, CRMModule],
 	exports: [
@@ -29,6 +31,7 @@ import { ClinicRankComponent } from 'src/app/components/utilities/clinic-rank/cl
 		BackToolbarComponent,
 		DashboardCircleComponent,
 		ClinicRankComponent,
+		ServiceMostSearchComponent,
 	],
 })
 export class DashboardModule {}

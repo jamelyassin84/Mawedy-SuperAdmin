@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core'
+import { Component, OnInit } from '@angular/core'
 
 @Component({
 	selector: 'app-clinic-rank',
@@ -8,8 +8,5 @@ import { Component, Input, OnInit } from '@angular/core'
 export class ClinicRankComponent implements OnInit {
 	constructor() {}
 
-	@Input() service!: string
-	@Input() department!: string
-	@Input() value!: number
 	ngOnInit(): void {}
 }

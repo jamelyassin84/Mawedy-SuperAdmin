@@ -64,26 +64,31 @@
 
 		<div class="col-md-3 mt-4">
 			<div class="card" style="padding-right: 0">
-				<div class="card-title sticky">Services Most Search</div>
+				<div class="card-title">Services Most Search</div>
 				<div
-					style="height: 453px; overflow-y: auto; padding-right: 30px"
+					style="height: 423px; overflow-y: auto; padding-right: 30px"
 				>
-					<app-clinic-rank
-						*ngFor="let item of [1, 2, 3, 4, 5, 6, 2, 3, 4, 5, 6]"
+					<app-service-most-search
+						*ngFor="let item of [1, 2, 3, 4, 5, 6]"
 						service="Botox"
 						department="Dermatology"
 						[value]="1356"
-					></app-clinic-rank>
+					>
+					</app-service-most-search>
 				</div>
 			</div>
 		</div>
 
 		<div class="col-md-9 mt-4">
 			<div class="card">
-				<div class="card-title sticky">Clinic Rank</div>
+				<div class="card-title d-flex">
+					Clinic Ranking <span class="ml-auto">Monthly</span>
+				</div>
 				<div
-					style="height: 453px; overflow-y: auto; padding-right: 30px"
-				></div>
+					style="height: 423px; overflow-y: auto; padding-right: 30px"
+				>
+					<app-clinic-rank></app-clinic-rank>
+				</div>
 			</div>
 		</div>
 	</div>

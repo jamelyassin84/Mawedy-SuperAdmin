@@ -1,8 +1,26 @@
-<div class="d-flex aic item-container">
-	<div class="item">
-		<div class="service">{{ service }}</div>
-		<div class="department">{{ department }}</div>
-	</div>
-	<div class="item value ml-auto">{{ value | number }}</div>
-	<img class="ml-5" src="../../../../assets/app/dashboard/up.svg" alt="" />
-</div>
+<table class="table w-100">
+	<thead>
+		<tr>
+			<th>Clinic</th>
+			<th>Location</th>
+			<th>Patients</th>
+			<th>Doctors</th>
+			<th>Reviews</th>
+			<th>Type</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr
+			*ngFor="
+				let item of [1, 2, 3, 4, 5, 6, 6, 5, 6, 3, 4, 5, 6, 6, 5, 6]
+			"
+		>
+			<td class="blue bold">Aster Clinic</td>
+			<td>(Bur Dubai Branch)</td>
+			<td class="blue">1,368</td>
+			<td class="blue">1,368</td>
+			<td class="blue">1,368</td>
+			<td class="premium">Premium</td>
+		</tr>
+	</tbody>
+</table>
