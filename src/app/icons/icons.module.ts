@@ -13,6 +13,8 @@ import {
 	Inbox,
 	ArrowLeft,
 	ChevronRight,
+	AlignRight,
+	Menu,
 } from 'angular-feather/icons'
 
 const icons = {
@@ -27,6 +29,8 @@ const icons = {
 	Inbox,
 	ArrowLeft,
 	ChevronRight,
+	AlignRight,
+	Menu,
 }
 
 @NgModule({
