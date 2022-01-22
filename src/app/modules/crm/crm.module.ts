@@ -1,3 +1,4 @@
+import { TopServicesComponent } from './../../components/utilities/top-services/top-services.component'
 import { NgModule } from '@angular/core'
 import { RouterModule } from '@angular/router'
 import { IconsModule } from './../../icons/icons.module'
@@ -20,6 +21,7 @@ import { BackToolbarComponent } from './../../components/toolbars/back-toolbar/b
 		CrmToolbarComponent,
 		ToolbarsComponent,
 		BackToolbarComponent,
+		TopServicesComponent,
 	],
 	imports: [CommonModule, IconsModule, RouterModule],
 	exports: [
@@ -31,6 +33,7 @@ import { BackToolbarComponent } from './../../components/toolbars/back-toolbar/b
 		CrmToolbarComponent,
 		ToolbarsComponent,
 		BackToolbarComponent,
+		TopServicesComponent,
 	],
 })
 export class CRMModule {}

@@ -1,0 +1,23 @@
+.item-container {
+	border-bottom: 1px solid var(--border1);
+	padding: 10px 0;
+}
+
+.service {
+	color: #2f9af5;
+	font-size: 1rem;
+	font-weight: bold;
+}
+.department {
+	font-size: 0.8rem;
+	color: #6f7d8f;
+}
+.value {
+	font-weight: bold;
+	font-size: 1.2rem;
+	color: #2f9af5;
+	text-align: right;
+}
+img {
+	object-fit: contain;
+}

@@ -16,10 +16,12 @@
 h1 {
 	text-align: left;
 	letter-spacing: 0.07px;
-	color: #00b074;
+	color: var(--accent);
 	font-size: 34px;
 	margin-bottom: 24px;
 	text-align: center;
+	font-family: bold;
+	font-weight: 900;
 }
 
 .login-container-wrapper {
@@ -81,6 +83,7 @@ button:focus {
 		opacity: 1;
 		font-size: 1.5rem;
 		margin-top: calc(83px - 45px);
+		padding-top: 0;
 	}
 }
 
