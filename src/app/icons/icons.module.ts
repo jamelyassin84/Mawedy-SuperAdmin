@@ -12,6 +12,7 @@ import {
 	User,
 	Inbox,
 	ArrowLeft,
+	ChevronRight,
 } from 'angular-feather/icons'
 
 const icons = {
@@ -25,6 +26,7 @@ const icons = {
 	Check,
 	Inbox,
 	ArrowLeft,
+	ChevronRight,
 }
 
 @NgModule({
