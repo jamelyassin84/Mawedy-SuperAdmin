@@ -29,18 +29,20 @@
 		border-left: 7px solid #f9ee44;
 		background: var(--bg2);
 	}
-	transition: 0.2s cubic-bezier(0.1, 0.3, 0.4, 0.99);
+	transition: 0.2s cubic-bezier(0.92, 0.09, 0, 0.99);
+	border-radius: 6px;
 }
 
 .active {
 	span {
 		text-align: left;
 		letter-spacing: 0.03px;
-		color: #00b074;
 		font-family: bold;
 	}
+	* {
+		color: var(--accent) !important;
+	}
 	background: var(--sidebarActiveBG) 0% 0% no-repeat padding-box;
-	border-radius: 6px;
 }
 
 .powered {

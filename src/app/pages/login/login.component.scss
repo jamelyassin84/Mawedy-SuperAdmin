@@ -1,5 +1,5 @@
 .login-container {
-	background-color: rgba($color: #00b074, $alpha: 0.1);
+	background-color: var(--page);
 	height: 100vh;
 }
 
@@ -25,7 +25,6 @@ h1 {
 .login-container-wrapper {
 	width: 600px;
 	background: var(--bg1) 0% 0% no-repeat padding-box;
-	box-shadow: 0px 3px 6px #00000029;
 	border-radius: 15px;
 	margin: auto;
 	display: flex;
@@ -33,6 +32,7 @@ h1 {
 	justify-content: center;
 	padding: 90px 100px;
 	min-height: 650px;
+	box-shadow: var(--dropShadow);
 }
 
 .container {
@@ -42,8 +42,10 @@ h1 {
 
 .btn {
 	margin-top: calc(83px - 45px);
-	background: #00b074;
-	color: white;
+	background: var(--accent);
+	span {
+		color: var(--bg1);
+	}
 	border-radius: 15px;
 	font-size: 1.2rem;
 	height: 50px;
@@ -83,9 +85,12 @@ button:focus {
 }
 
 input {
-	border: 1px solid #cad0db !important;
+	border: 1px solid rgba($color: gray, $alpha: 0.2) !important;
 	margin-bottom: 0px;
 	font-size: 1rem;
+	border-radius: 15px;
+	padding: 1rem !important;
+	height: 3.1rem !important;
 }
 
 a {

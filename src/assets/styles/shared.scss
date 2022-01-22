@@ -13,6 +13,7 @@ body {
 	padding: 64px;
 	min-height: 83vh;
 	width: calc(100vw - 280px);
+	padding-top: 8rem;
 }
 
 .page-content {
@@ -141,7 +142,7 @@ i {
 	border-radius: 15px;
 	background: var(--bg1);
 	border: none;
-	box-shadow: rgba(79, 112, 97, 0.15) 0px 48px 100px 0px;
+	box-shadow: var(--dropShadow);
 }
 
 .sticky {
@@ -149,7 +150,7 @@ i {
 	top: 0;
 }
 .green {
-	color: #00b074;
+	color: #00b074 !important;
 }
 .blue {
 	color: #2f9af5;

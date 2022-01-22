@@ -1,3 +1,6 @@
+export const randomNumber = (): number => {
+	return Math.floor(Math.random() * 150)
+}
 export const analyticChartConfig = {
 	options: {
 		scaleShowVerticalLines: false,
@@ -21,7 +24,20 @@ export const analyticChartConfig = {
 	legend: true,
 	datasets: [
 		{
-			data: [20, 40, 50, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+			data: [
+				randomNumber(),
+				randomNumber(),
+				randomNumber(),
+				randomNumber(),
+				randomNumber(),
+				randomNumber(),
+				randomNumber(),
+				randomNumber(),
+				randomNumber(),
+				randomNumber(),
+				randomNumber(),
+				randomNumber(),
+			],
 
 			label: 'Total Reached',
 			backgroundColor: ['#00b074'],

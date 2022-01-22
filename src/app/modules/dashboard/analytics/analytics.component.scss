@@ -13,4 +13,15 @@
 
 .green {
 	color: #00b074;
+	cursor: default !important;
+	pointer-events: none;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.link {
+	&:hover {
+		text-decoration: underline;
+	}
 }

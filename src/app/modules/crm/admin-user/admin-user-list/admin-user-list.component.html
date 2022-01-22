@@ -8,17 +8,20 @@
 		<table class="table">
 			<thead>
 				<tr>
+					<th role="button" class="text-center">All</th>
 					<th>Clinic Name</th>
 					<th>Accounts</th>
 					<th class="text-center">Subscription</th>
 					<th>Expiry</th>
 					<th>Registered Via</th>
 					<th class="text-center">Action</th>
-					<th role="button" class="text-center">Select All</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr *ngFor="let item of [1, 2, 3, 4, 5, 6, 7, 8]">
+					<td class="text-center">
+						<input type="checkbox" />
+					</td>
 					<td>
 						<div
 							routerLink="/home/crm/admin-user-details"
@@ -48,9 +51,6 @@
 							<option>Activate</option>
 							<option>Deactivate</option>
 						</select>
-					</td>
-					<td class="text-center">
-						<input type="checkbox" />
 					</td>
 				</tr>
 			</tbody>
