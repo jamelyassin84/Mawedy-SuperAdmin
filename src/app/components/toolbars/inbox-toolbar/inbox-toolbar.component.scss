@@ -1,0 +1,48 @@
+.tab {
+	font-family: normal;
+	text-align: left;
+	letter-spacing: 0.04px;
+	position: relative;
+	font-family: bold;
+	cursor: pointer;
+	width: 150px;
+	padding: 20px 30px;
+	padding-top: 0;
+	.badge {
+		letter-spacing: 0.03px;
+		border-radius: 14px;
+		font-size: 12px;
+		justify-content: center;
+		padding: 5px 9px;
+		color: #6d7c8d;
+		background: var(--bg1) 0% 0% no-repeat padding-box;
+	}
+	.border-div {
+		height: 5px;
+		width: 150px;
+		border-top-left-radius: 6px;
+		border-top-right-radius: 6px;
+		bottom: 0;
+		position: absolute;
+		margin-left: -5px;
+	}
+	.tab-text {
+		font-size: 1.2rem;
+	}
+}
+
+.active {
+	color: #00b074;
+	text-transform: capitalize;
+	font-family: bold;
+
+	.badge {
+		color: white;
+		background: #00b074 0% 0% no-repeat padding-box;
+	}
+
+	.border-div {
+		width: 100px;
+		background: #00b074;
+	}
+}

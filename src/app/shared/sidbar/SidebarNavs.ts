@@ -12,7 +12,7 @@ export const SidebarNav: SidebarNavType[] = [
 	{
 		name: 'Inbox',
 		route: `/home/inbox`,
-		icon: `mail`,
+		icon: `inbox`,
 	},
 ]
 export type SidebarNavType = {

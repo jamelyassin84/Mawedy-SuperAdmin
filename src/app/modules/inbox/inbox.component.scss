@@ -1,0 +1,22 @@
+.unread {
+	* {
+		font-weight: 500;
+		font-family: bold;
+		color: var(--color1);
+	}
+}
+
+* {
+	color: var(--color2);
+	font-weight: normal;
+	font-family: normal;
+}
+tr:nth-child(even) {
+	background-color: rgba($color: #00b074, $alpha: 0.1);
+}
+tr:nth-child(odd) {
+	background-color: var(--table) !important;
+}
+tr {
+	cursor: pointer;
+}

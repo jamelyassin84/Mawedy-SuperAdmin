@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core'
 import { FeatherModule } from 'angular-feather'
+
 import {
 	Home,
 	Users,
@@ -8,16 +9,20 @@ import {
 	ChevronDown,
 	Search,
 	Check,
+	User,
+	Inbox,
 } from 'angular-feather/icons'
 
 const icons = {
 	Home,
 	Users,
+	User,
 	Mail,
 	Bell,
 	ChevronDown,
 	Search,
 	Check,
+	Inbox,
 }
 
 @NgModule({
