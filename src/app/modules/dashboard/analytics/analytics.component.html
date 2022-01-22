@@ -8,51 +8,31 @@
 		<div class="col-md-12">
 			<div class="card">
 				<div class="card-header d-flex">
-					<div role="button" class="card-title mr-3">
+					<div
+						[class.green]="tab === 1"
+						(click)="tab = 1"
+						role="button"
+						class="card-title mr-3"
+					>
 						Website Traffic
 					</div>
 					<div class="card-title mr-3">|</div>
-					<div role="button" class="card-title">
+					<div
+						[class.green]="tab === 2"
+						(click)="tab = 2"
+						role="button"
+						class="card-title"
+					>
 						Online Engagement
 					</div>
 				</div>
 				<div class="card-body">
-					<div class="row">
-						<div class="col-md-3">
-							<div class="title">Total View</div>
-							<div class="value">321</div>
-						</div>
-						<div class="col-md-3 active">
-							<div class="title">Registered</div>
-							<div class="value">321</div>
-						</div>
-						<div class="col-md-3">
-							<div class="d-flex aic input">
-								<div class="circle mr-2"></div>
-								<span>Total View</span>
-							</div>
-							<div class="d-flex aic input active">
-								<div class="circle mr-2"></div>
-								<span>Total Registered</span>
-							</div>
-						</div>
-						<div class="col-md-3">
-							<select class="form-control">
-								<option>2022</option>
-							</select>
-						</div>
-						<div class="col-md-12">
-							<canvas
-								baseChart
-								[datasets]="analyticsChart.datasets"
-								[labels]="analyticsChart.labels"
-								[options]="analyticsChart.options"
-								[legend]="analyticsChart.legend"
-								chartType="bar"
-							>
-							</canvas>
-						</div>
-					</div>
+					<dashboard-website-traffic
+						*ngIf="tab === 1"
+					></dashboard-website-traffic>
+					<dashboard-online-engagement
+						*ngIf="tab === 2"
+					></dashboard-online-engagement>
 				</div>
 			</div>
 		</div>

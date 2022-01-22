@@ -1,0 +1,16 @@
+.value {
+	color: #6f7d8f;
+	font-size: 4rem;
+}
+
+.title {
+	color: #6f7d8f;
+}
+.active {
+	* {
+		color: #00b074;
+	}
+	.circle {
+		border: 4px solid #00b074;
+	}
+}
