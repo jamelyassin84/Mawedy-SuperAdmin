@@ -21,3 +21,9 @@ td {
 	padding-top: 15px;
 	border-bottom: 1px solid var(--border1);
 }
+tr:nth-child(even) {
+	background-color: var(--trBg2) !important;
+}
+tr:nth-child(odd) {
+	background-color: var(--table) !important;
+}

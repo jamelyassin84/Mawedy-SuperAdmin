@@ -2,7 +2,7 @@ import { TabType } from './../dashboard-toolbar/Dasboard.route'
 export const CRMTabs: TabType[] = [
 	{
 		id: 1,
-		name: 'Trial',
+		name: 'On-Trial',
 		route: '/home/crm/admin-user',
 	},
 	// {
@@ -12,12 +12,12 @@ export const CRMTabs: TabType[] = [
 	// },
 	{
 		id: 3,
-		name: 'Mobile Application ',
+		name: 'Mobile Application Only',
 		route: '/home/crm/app-user',
 	},
 	{
 		id: 4,
-		name: 'Premium',
+		name: 'Premium User',
 		route: '/home/crm/premium-user',
 	},
 ]

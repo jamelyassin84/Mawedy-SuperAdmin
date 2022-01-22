@@ -7,44 +7,52 @@
 	<div class="row">
 		<div class="col-md-3">
 			<div class="card">
-				<div class="card-title">Registered Clinics</div>
-				<dashboard-circle
-					circleColor="#2F9AF5"
-					[value]="56"
-					title="Solution Users"
-					titleColor="#a6a6a6"
-				></dashboard-circle>
+				<div class="card-header">
+					<div class="card-title">Registered Clinics/Hospitals</div>
+				</div>
+				<div class="card-body">
+					<dashboard-circle
+						circleColor="#2F9AF5"
+						[value]="56"
+						title="Solution Users"
+						titleColor="#a6a6a6"
+					></dashboard-circle>
+				</div>
 			</div>
 		</div>
 		<div class="col-md-6">
 			<div class="card">
-				<div class="card-title">App Users</div>
-				<div class="row">
-					<div class="col-md-6">
-						<dashboard-circle
-							circleColor="#00B074"
-							[value]="143"
-							title="Active"
-							titleColor="#a6a6a6"
-						></dashboard-circle>
-					</div>
-					<div class="col-md-6">
-						<div
-							class="d-flex jcc h-100"
-							style="flex-direction: column"
-						>
-							<div class="downloads">
-								<div class="title">iOS</div>
-								<div class="value">89</div>
-							</div>
-							<div class="downloads">
-								<div class="title">Android</div>
-								<div class="value">58</div>
-							</div>
+				<div class="card-header">
+					<div class="card-title">Mobile Application Users</div>
+				</div>
+				<div class="card-body">
+					<div class="row">
+						<div class="col-md-6">
+							<dashboard-circle
+								circleColor="#00B074"
+								[value]="143"
+								title="Active"
+								titleColor="#a6a6a6"
+							></dashboard-circle>
+						</div>
+						<div class="col-md-6">
+							<div
+								class="d-flex jcc h-100"
+								style="flex-direction: column"
+							>
+								<div class="downloads">
+									<div class="title">iOS</div>
+									<div class="value">89</div>
+								</div>
+								<div class="downloads">
+									<div class="title">Android</div>
+									<div class="value">58</div>
+								</div>
 
-							<div class="downloads">
-								<div class="title">Total App Downloads</div>
-								<div class="value">235</div>
+								<div class="downloads">
+									<div class="title">Total Downloads</div>
+									<div class="value">235</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -53,42 +61,62 @@
 		</div>
 		<div class="col-md-3">
 			<div class="card">
-				<div class="card-title">For Approval</div>
-				<dashboard-circle
-					circleColor="#F7C325"
-					value="03"
-					title="For Approval"
-					titleColor="#a6a6a6"
-				></dashboard-circle>
+				<div class="card-header">
+					<div class="card-title">Approval Requests</div>
+				</div>
+				<div class="card-body">
+					<dashboard-circle
+						circleColor="#F7C325"
+						value="03"
+						title="For Approval"
+						titleColor="#a6a6a6"
+					></dashboard-circle>
+				</div>
 			</div>
 		</div>
 
 		<div class="col-md-3 mt-4">
 			<div class="card" style="padding-right: 0">
-				<div class="card-title">Services Most Search</div>
-				<div
-					style="height: 423px; overflow-y: auto; padding-right: 30px"
-				>
-					<app-service-most-search
-						*ngFor="let item of [1, 2, 3, 4, 5, 6]"
-						service="Botox"
-						department="Dermatology"
-						[value]="1356"
+				<div class="card-header">
+					<div class="card-title">Services Most Search</div>
+				</div>
+				<div class="card-body">
+					<div
+						style="
+							height: 423px;
+							overflow-y: auto;
+							padding-right: 30px;
+						"
 					>
-					</app-service-most-search>
+						<app-service-most-search
+							*ngFor="let item of [1, 2, 3, 4, 5, 6]"
+							service="Botox"
+							department="Dermatology"
+							[value]="1356"
+						>
+						</app-service-most-search>
+					</div>
 				</div>
 			</div>
 		</div>
 
 		<div class="col-md-9 mt-4">
 			<div class="card">
-				<div class="card-title d-flex">
-					Clinic Ranking <span class="ml-auto">Monthly</span>
+				<div class="card-header">
+					<div class="card-title d-flex">
+						Clinic Ranking <span class="ml-auto">Monthly</span>
+					</div>
 				</div>
-				<div
-					style="height: 423px; overflow-y: auto; padding-right: 30px"
-				>
-					<app-clinic-rank></app-clinic-rank>
+				<div class="card-body">
+					<div
+						style="
+							height: 423px;
+							overflow-y: auto;
+							padding-right: 30px;
+						"
+					>
+						<app-clinic-rank></app-clinic-rank>
+					</div>
 				</div>
 			</div>
 		</div>

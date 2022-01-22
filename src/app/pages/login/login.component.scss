@@ -40,10 +40,6 @@ h1 {
 	flex-direction: column;
 }
 
-.form-group {
-	margin-bottom: 15px;
-}
-
 .btn {
 	margin-top: calc(83px - 45px);
 	background: #00b074;
@@ -87,9 +83,9 @@ button:focus {
 }
 
 input {
-	height: 66px;
-	border-radius: 10px;
 	border: 1px solid #cad0db !important;
+	margin-bottom: 0px;
+	font-size: 1rem;
 }
 
 a {
@@ -104,11 +100,10 @@ a {
 
 footer {
 	width: 100%;
-	margin: 44px;
+	margin: 1rem;
+	position: fixed;
+	bottom: 0;
 	div {
-		text-align: center;
-		letter-spacing: 0.6px;
-		color: #00b074;
 		font-size: 1rem;
 		width: 100%;
 	}
