@@ -75,8 +75,8 @@
 								<div class="title">Expiry :</div>
 								<div class="ml-3 value">
 									Jul 4,2023
-									<span class="text-danger bold">
-										89days
+									<span class="text-danger bold ml-3">
+										89 days left
 									</span>
 								</div>
 							</div>
@@ -85,15 +85,37 @@
 							<button class="btn btn-sm mt-2">Send Alerts</button>
 						</div>
 					</div>
-					<div class="col-md-6 patients-data"></div>
-					<div class="col-md-6 doctors-data"></div>
+					<div class="row mt-5">
+						<div class="col-md-6 patients-data">
+							<clinic-data-card
+								background="#4FAEFF"
+								color="white"
+								title="Patients Data"
+								value="321"
+								secondTitle="Total Patients"
+								secondValue="Patients From The Last Month"
+								[callback]="exportPatient()"
+							></clinic-data-card>
+						</div>
+						<div class="col-md-6 doctors-data">
+							<clinic-data-card
+								background="#C1FAF4"
+								color="var(--color1)"
+								title="Doctors Data"
+								value="434"
+								secondTitle="Total Doctors"
+								secondValue="Doctors From The Last Month"
+								[callback]="exportPatient()"
+							></clinic-data-card>
+						</div>
+					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="card">
 						<div class="card-header">
 							<div class="card-title">Top Services</div>
 						</div>
-						<div class="cardbody">
+						<div class="card-body">
 							<top-services
 								*ngFor="let item of [1, 2, 3, 4, 5, 6]"
 								service="Botox"

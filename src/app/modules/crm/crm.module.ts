@@ -1,3 +1,4 @@
+import { ClinicDataCardComponent } from './../../components/utilities/clinic-data-card/clinic-data-card.component'
 import { TopServicesComponent } from './../../components/utilities/top-services/top-services.component'
 import { NgModule } from '@angular/core'
 import { RouterModule } from '@angular/router'
@@ -22,6 +23,7 @@ import { BackToolbarComponent } from './../../components/toolbars/back-toolbar/b
 		ToolbarsComponent,
 		BackToolbarComponent,
 		TopServicesComponent,
+		ClinicDataCardComponent,
 	],
 	imports: [CommonModule, IconsModule, RouterModule],
 	exports: [
@@ -34,6 +36,7 @@ import { BackToolbarComponent } from './../../components/toolbars/back-toolbar/b
 		ToolbarsComponent,
 		BackToolbarComponent,
 		TopServicesComponent,
+		ClinicDataCardComponent,
 	],
 })
 export class CRMModule {}
