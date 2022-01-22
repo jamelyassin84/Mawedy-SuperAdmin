@@ -1,19 +1,34 @@
 export const SidebarNav: SidebarNavType[] = [
 	{
-		name: 'Dashboard',
+		name: 'Home',
 		route: `/home/`,
 		icon: `home`,
 	},
 	{
-		name: 'CRM',
+		name: 'Subscribers',
 		route: `/home/crm`,
 		icon: `users`,
 	},
+	// {
+	// 	name: 'Clinics',
+	// 	route: `/home/crm`,
+	// 	icon: `users`,
+	// },
+	// {
+	// 	name: 'Hospitals',
+	// 	route: `/home/crm`,
+	// 	icon: `users`,
+	// },
 	{
-		name: 'Inbox',
+		name: 'Mails',
 		route: `/home/inbox`,
 		icon: `inbox`,
 	},
+	// {
+	// 	name: 'Logs',
+	// 	route: `/home/crm`,
+	// 	icon: `users`,
+	// },
 ]
 export type SidebarNavType = {
 	name: string

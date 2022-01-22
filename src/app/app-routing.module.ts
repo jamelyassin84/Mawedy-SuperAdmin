@@ -1,4 +1,4 @@
-import { MessageDetailsComponent } from './modules/message-details/message-details.component'
+import { MessageDetailsComponent } from './modules/inbox/message-details/message-details.component'
 import { InboxComponent } from './modules/inbox/inbox.component'
 import { AdminUserDetailsComponent } from './modules/crm/admin-user/admin-user-details/admin-user-details.component'
 import { AppUserDetailsComponent } from './modules/crm/app-user/app-user-details/app-user-details.component'
@@ -84,7 +84,7 @@ const routes: Routes = [
 				component: InboxComponent,
 			},
 			{
-				path: 'message-details',
+				path: 'message-details/:id',
 				component: MessageDetailsComponent,
 			},
 		],

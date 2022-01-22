@@ -1,0 +1,30 @@
+.title {
+	color: var(--color2);
+	font-size: 1.2rem;
+}
+.value {
+	color: var(--color1);
+	font-size: 1rem;
+	margin-bottom: 2rem;
+}
+
+.btn {
+	background: #00b074;
+	color: white;
+	border-radius: 15px;
+	font-size: 1.2rem;
+	height: 50px;
+	min-width: 150px;
+}
+
+.card-header {
+	background: transparent;
+	padding-bottom: 2rem;
+	padding-top: 2rem;
+}
+
+.clinic {
+	margin-top: 2rem;
+	font-size: 1.3rem;
+	color: var(--color2);
+}

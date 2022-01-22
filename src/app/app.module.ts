@@ -24,13 +24,13 @@ import { SidbarComponent } from './shared/sidbar/sidbar.component'
 		SidbarComponent,
 	],
 	imports: [
+		IconsModule,
 		BrowserModule,
 		AppRoutingModule,
 		RouterModule,
 		BrowserAnimationsModule,
 		HttpClientModule,
 
-		IconsModule,
 		DashboardModule,
 		CRMModule,
 		InboxModule,

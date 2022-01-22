@@ -20,7 +20,8 @@
 			</thead>
 			<tbody>
 				<tr
-					[class.unread]="i === 0"
+					routerLink="/home/message-details/2"
+					[class.unread]="i < 3"
 					*ngFor="let item of [1, 2, 3, 4, 5, 6, 7]; let i = index"
 				>
 					<td>
