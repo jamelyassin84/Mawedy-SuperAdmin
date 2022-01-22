@@ -1,3 +1,5 @@
+import { RouterModule } from '@angular/router'
+import { IconsModule } from './../../icons/icons.module'
 import { ToolbarsComponent } from './../../shared/toolbars/toolbars.component'
 import { CrmToolbarComponent } from './../../components/toolbars/crm-toolbar/crm-toolbar.component'
 import { NgModule } from '@angular/core'
@@ -18,7 +20,7 @@ import { PremiumUserListComponent } from './premium-user/premium-user-list/premi
 		CrmToolbarComponent,
 		ToolbarsComponent,
 	],
-	imports: [CommonModule],
+	imports: [CommonModule, IconsModule, RouterModule],
 	exports: [CrmToolbarComponent, ToolbarsComponent],
 })
 export class CRMModule {}

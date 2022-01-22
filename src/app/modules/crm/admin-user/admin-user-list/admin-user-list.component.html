@@ -11,14 +11,48 @@
 					<th>Clinic Name</th>
 					<th>Accounts</th>
 					<th>Device</th>
-					<th>Subscription</th>
+					<th class="text-center">Subscription</th>
 					<th>Expiry</th>
 					<th>Registered Via</th>
-					<th>Action</th>
-					<th>Select All</th>
+					<th class="text-center">Action</th>
+					<th role="button" class="text-center">Select All</th>
 				</tr>
 			</thead>
-			<tbody></tbody>
+			<tbody>
+				<tr *ngFor="let item of [1, 2, 3, 4, 5, 6, 7, 8]">
+					<td>
+						<div class="d-flex aic clickable">
+							<img
+								src="../../../../../assets/app/clinics/aster.jpg"
+								alt=""
+							/>
+							<div class="text ml-4">
+								<div class="clinic">Aburas Dental Clinic</div>
+								<div class="location text-muted">
+									Jumeirah Al Sayed Rd.
+								</div>
+							</div>
+							<div class="ml-5">
+								<i-feather name="chevron-right"></i-feather>
+							</div>
+						</div>
+					</td>
+					<td>3</td>
+					<td>Windows PC</td>
+					<td class="text-center">On Trial</td>
+					<td>29 days left</td>
+					<td>Website</td>
+					<td class="text-center">
+						<select class="form-control">
+							<option>Activate</option>
+							<option>Deactivate</option>
+						</select>
+					</td>
+					<td class="text-center">
+						<input type="checkbox" />
+					</td>
+				</tr>
+			</tbody>
 		</table>
 	</div>
 </div>
