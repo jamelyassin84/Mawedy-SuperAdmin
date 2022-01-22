@@ -39,7 +39,7 @@
 		letter-spacing: 0.03px;
 		font-family: bold;
 	}
-	* {
+	*:not(.badge) {
 		color: var(--accent) !important;
 	}
 	background: var(--sidebarActiveBG) 0% 0% no-repeat padding-box;

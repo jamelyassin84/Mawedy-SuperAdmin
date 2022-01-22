@@ -11,6 +11,7 @@ import { RouterModule, Routes } from '@angular/router'
 import { LoginComponent } from './pages/login/login.component'
 import { OverviewComponent } from './modules/dashboard/overview/overview.component'
 import { AnalyticsComponent } from './modules/dashboard/analytics/analytics.component'
+import { PremiumUserDetailsComponent } from './modules/crm/premium-user/premium-user-details/premium-user-details.component'
 
 const routes: Routes = [
 	{
@@ -76,6 +77,10 @@ const routes: Routes = [
 					{
 						path: 'premium-user',
 						component: PremiumUserListComponent,
+					},
+					{
+						path: 'premium-user-details',
+						component: PremiumUserDetailsComponent,
 					},
 				],
 			},

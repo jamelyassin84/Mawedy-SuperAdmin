@@ -12,6 +12,7 @@ import { AppUserListComponent } from './app-user/app-user-list/app-user-list.com
 import { AppUserDetailsComponent } from './app-user/app-user-details/app-user-details.component'
 import { PremiumUserListComponent } from './premium-user/premium-user-list/premium-user-list.component'
 import { BackToolbarComponent } from './../../components/toolbars/back-toolbar/back-toolbar.component'
+import { PremiumUserDetailsComponent } from './premium-user/premium-user-details/premium-user-details.component'
 @NgModule({
 	declarations: [
 		AdminUserListComponent,
@@ -24,6 +25,7 @@ import { BackToolbarComponent } from './../../components/toolbars/back-toolbar/b
 		BackToolbarComponent,
 		TopServicesComponent,
 		ClinicDataCardComponent,
+		PremiumUserDetailsComponent,
 	],
 	imports: [CommonModule, IconsModule, RouterModule],
 	exports: [
@@ -37,6 +39,7 @@ import { BackToolbarComponent } from './../../components/toolbars/back-toolbar/b
 		BackToolbarComponent,
 		TopServicesComponent,
 		ClinicDataCardComponent,
+		PremiumUserDetailsComponent,
 	],
 })
 export class CRMModule {}
