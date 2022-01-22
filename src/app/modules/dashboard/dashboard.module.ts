@@ -1,3 +1,6 @@
+import { WebSessionsComponent } from './../../components/utilities/web-sessions/web-sessions.component'
+import { TopLocationComponent } from './../../components/utilities/top-location/top-location.component'
+import { AppSessionsComponent } from './../../components/utilities/app-sessions/app-sessions.component'
 import { DashboardCircleComponent } from './../../components/utilities/dashboard-circle/dashboard-circle.component'
 import { CRMModule } from './../crm/crm.module'
 
@@ -22,6 +25,9 @@ import { NgChartsModule } from 'ng2-charts'
 		DashboardCircleComponent,
 		ClinicRankComponent,
 		ServiceMostSearchComponent,
+		AppSessionsComponent,
+		TopLocationComponent,
+		WebSessionsComponent,
 	],
 	imports: [CommonModule, CRMModule, NgChartsModule],
 	exports: [
@@ -33,6 +39,9 @@ import { NgChartsModule } from 'ng2-charts'
 		DashboardCircleComponent,
 		ClinicRankComponent,
 		ServiceMostSearchComponent,
+		AppSessionsComponent,
+		TopLocationComponent,
+		WebSessionsComponent,
 	],
 })
 export class DashboardModule {}
