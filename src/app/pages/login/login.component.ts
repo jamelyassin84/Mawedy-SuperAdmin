@@ -13,6 +13,11 @@ export class LoginComponent implements OnInit {
 
 	isProcessing: boolean | 'complete' = false
 
+	data = {
+		username: '',
+		password: '',
+	}
+
 	login() {
 		this.isProcessing = true
 
