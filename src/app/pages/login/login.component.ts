@@ -68,6 +68,7 @@ export class LoginComponent implements OnInit {
 		for (let key in this.data) {
 			this.data[key] = ''
 		}
+		this.data['type'] = 'admin'
 		this.usernameInput.nativeElement.focus()
 	}
 }

@@ -25,7 +25,7 @@ h1 {
 }
 
 .login-container-wrapper {
-	width: 600px;
+	width: 500px;
 	background: var(--bg1) 0% 0% no-repeat padding-box;
 	border-radius: 15px;
 	margin: auto;
@@ -33,7 +33,7 @@ h1 {
 	flex-direction: column;
 	justify-content: center;
 	padding: 90px 100px;
-	min-height: 650px;
+	min-height: 550px;
 	box-shadow: var(--dropShadow);
 }
 
@@ -43,7 +43,6 @@ h1 {
 }
 
 .btn {
-	margin-top: calc(83px - 45px);
 	background: var(--accent);
 	span {
 		color: var(--bg1);
@@ -73,7 +72,7 @@ button:focus {
 	outline: 0 !important;
 }
 .btn :active {
-	font-size: 0.2rem;
+	font-size: 0.95rem;
 }
 .isComplete {
 	.btn {
