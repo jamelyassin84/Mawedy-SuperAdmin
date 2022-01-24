@@ -1,5 +1,5 @@
-import { AlertType } from './../../../models/alert.type'
 import { Component, OnInit } from '@angular/core'
+import { alertAnimation } from 'src/app/animations/alert.animation'
 import { Alert } from 'src/app/models/alert.type'
 import { AlertService } from 'src/app/services/utilities/alert.service'
 
@@ -7,6 +7,7 @@ import { AlertService } from 'src/app/services/utilities/alert.service'
 	selector: 'app-alert',
 	templateUrl: './alert.component.html',
 	styleUrls: ['./alert.component.scss'],
+	animations: [alertAnimation],
 })
 export class AlertComponent implements OnInit {
 	constructor(private service: AlertService) {
@@ -21,7 +22,7 @@ export class AlertComponent implements OnInit {
 	ngOnInit(): void {
 		this.timer = setTimeout(() => {
 			this.alerts.shift()
-		}, 5000)
+		}, 1000)
 	}
 
 	close(index: number) {

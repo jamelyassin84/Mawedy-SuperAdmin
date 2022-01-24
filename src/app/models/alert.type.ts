@@ -5,5 +5,4 @@ export type Alert = {
 	description?: string
 	callback?: Function | any
 	type?: AlertType
-	isShowing: boolean
 }

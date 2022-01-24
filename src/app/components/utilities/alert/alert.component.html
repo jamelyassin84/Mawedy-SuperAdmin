@@ -1,12 +1,12 @@
-<div *ngFor="let alert of alerts; let i = index">
+<div [@alert]="alerts.length" class="alert-wrapper">
 	<div
-		[@content]
 		[class.success]="alert.type === 'success'"
 		[class.info]="alert.type === 'info'"
 		[class.warning]="alert.type === 'warning'"
 		[class.error]="alert.type === 'error'"
 		class="alert"
 		(click)="alert.callback()"
+		*ngFor="let alert of alerts; let i = index"
 	>
 		<span class="border"></span>
 		<div class="icon">

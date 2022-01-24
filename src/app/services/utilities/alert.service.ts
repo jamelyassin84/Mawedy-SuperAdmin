@@ -8,13 +8,13 @@ import { Subject } from 'rxjs'
 export class AlertService {
 	constructor() {}
 
-	private modal = new Subject<Alert | undefined>()
+	private alert = new Subject<Alert | undefined>()
 
 	Fire(data: Alert | undefined): void {
-		this.modal.next(data)
+		this.alert.next(data)
 	}
 
 	listen() {
-		return this.modal.asObservable()
+		return this.alert.asObservable()
 	}
 }

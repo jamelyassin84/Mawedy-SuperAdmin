@@ -13,8 +13,9 @@ import { AppComponent } from './app.component'
 import { LoginComponent } from './pages/login/login.component'
 import { HomeComponent } from './pages/home/home.component'
 import { NavbarComponent } from './shared/navbar/navbar.component'
-import { SidbarComponent } from './shared/sidbar/sidbar.component';
+import { SidbarComponent } from './shared/sidbar/sidbar.component'
 import { AlertComponent } from './components/utilities/alert/alert.component'
+import { FormsModule } from '@angular/forms'
 
 @NgModule({
 	declarations: [
@@ -23,7 +24,7 @@ import { AlertComponent } from './components/utilities/alert/alert.component'
 		HomeComponent,
 		NavbarComponent,
 		SidbarComponent,
-  AlertComponent,
+		AlertComponent,
 	],
 	imports: [
 		IconsModule,
@@ -32,6 +33,7 @@ import { AlertComponent } from './components/utilities/alert/alert.component'
 		RouterModule,
 		BrowserAnimationsModule,
 		HttpClientModule,
+		FormsModule,
 
 		DashboardModule,
 		CRMModule,
