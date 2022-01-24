@@ -16,6 +16,7 @@ import { NavbarComponent } from './shared/navbar/navbar.component'
 import { SidbarComponent } from './shared/sidbar/sidbar.component'
 import { AlertComponent } from './components/utilities/alert/alert.component'
 import { FormsModule } from '@angular/forms'
+import { MainInterceptor } from './interceptors/main.interceptor'
 
 @NgModule({
 	declarations: [
@@ -39,7 +40,13 @@ import { FormsModule } from '@angular/forms'
 		CRMModule,
 		InboxModule,
 	],
-	providers: [],
+	providers: [
+		{
+			provide: HTTP_INTERCEPTORS,
+			useClass: MainInterceptor,
+			multi: true,
+		},
+	],
 	bootstrap: [AppComponent],
 })
 export class AppModule {}

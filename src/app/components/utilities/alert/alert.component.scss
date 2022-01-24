@@ -26,6 +26,14 @@
 		position: absolute;
 		right: 29px;
 		top: 23px;
+		padding: 10px;
+		border-radius: 50%;
+		&:active {
+			transform: scale(0.94);
+		}
+		&:hover {
+			background: rgba($color: black, $alpha: 0.1);
+		}
 	}
 }
 

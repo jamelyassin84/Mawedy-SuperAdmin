@@ -1,5 +1,7 @@
 export enum ROUTES {
 	AUTH = 'auth',
+	LOGIN = 'auth/login',
+	LOGOUT = 'auth/logout',
 	ADMIN = 'admin',
 	ROLES = 'role',
 	EMAILS = 'email',

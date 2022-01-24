@@ -8,7 +8,7 @@ import {
 } from '@angular/animations'
 
 const contentOpen = {
-	transform: 'translateY(-50%)',
+	transform: 'translateY(-10%)',
 	opacity: 1,
 }
 
@@ -22,7 +22,7 @@ export const alertAnimation = trigger('alert', [
 		query(':enter', [animate('.4s ease-out', style(contentOpen))], {
 			optional: true,
 		}),
-		query(':leave', animate('.3s', style(contentClose)), {
+		query(':leave', animate('.2s', style(contentClose)), {
 			optional: true,
 		}),
 	]),

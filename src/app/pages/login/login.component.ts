@@ -1,5 +1,8 @@
+import { ROUTES } from './../../services/api/routes'
+import { HttpClient } from '@angular/common/http'
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core'
 import { Router } from '@angular/router'
+import { BaseService } from 'src/app/services/api/base.service'
 import { AlertService } from 'src/app/services/utilities/alert.service'
 
 @Component({
@@ -9,7 +12,11 @@ import { AlertService } from 'src/app/services/utilities/alert.service'
 })
 export class LoginComponent implements OnInit {
 	@ViewChild('username') usernameInput!: ElementRef
-	constructor(private router: Router, protected alert: AlertService) {}
+	constructor(
+		private router: Router,
+		protected alert: AlertService,
+		private http: HttpClient,
+	) {}
 
 	ngOnInit(): void {}
 
@@ -19,32 +26,48 @@ export class LoginComponent implements OnInit {
 
 	isProcessing: boolean | 'complete' = false
 
-	data = {
+	data: any = {
 		username: '',
 		password: '',
+		type: 'admin',
 	}
 
-	login() {
+	login(): void {
 		this.isProcessing = true
-		if (this.data.username === '' || this.data.password === '') {
-			this.isProcessing = false
-			this.alert.Fire({
-				title: 'Error',
-				description: 'Password should not be empty',
-				type: 'error',
-			})
-
-			return this.alert.Fire({
-				title: 'Error',
-				description: 'Username should not be empty',
-				type: 'error',
-			})
+		for (let key in this.data) {
+			if (this.data[key] === '') {
+				this.isProcessing = false
+				this.clearFields()
+				return this.alert.Fire({
+					title: 'Error',
+					description: `${
+						key.charAt(0).toUpperCase() +
+						key.substr(1).toLowerCase()
+					} should not be empty`,
+					type: 'error',
+				})
+			}
 		}
-		setTimeout(() => {
-			this.isProcessing = 'complete'
-			setTimeout(() => {
-				this.router.navigate(['/home'])
-			}, 700)
-		}, 1500)
+
+		new BaseService(this.http, ROUTES.LOGIN).create(this.data).subscribe(
+			(data) => {
+				localStorage.setItem('user', JSON.stringify(data.user))
+				localStorage.setItem('token', data.token)
+				setTimeout(() => {
+					this.isProcessing = 'complete'
+					setTimeout(() => {
+						this.router.navigate(['/home'])
+					}, 700)
+				}, 1500)
+			},
+			() => (this.isProcessing = false),
+		)
+	}
+
+	clearFields(): void {
+		for (let key in this.data) {
+			this.data[key] = ''
+		}
+		this.usernameInput.nativeElement.focus()
 	}
 }

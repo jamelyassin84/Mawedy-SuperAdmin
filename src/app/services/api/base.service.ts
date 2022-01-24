@@ -9,20 +9,20 @@ export class BaseService {
 	constructor(
 		public http: HttpClient,
 		@Inject('url') public url: String = '',
-		@Inject('params') @Optional() public params: String,
+		@Inject('params') @Optional() public params: string | null = null,
 	) {}
 
 	headers() {
 		let token = localStorage.getItem('token')
-		if (token === undefined) {
-			token = ''
+		let headers: any = {
+			Accept: 'application/json',
+			'Content-Type': [],
+		}
+		if (token !== null) {
+			headers['Authorization'] + 'Bearer ' + token
 		}
 		return {
-			headers: new HttpHeaders({
-				Accept: 'application/json',
-				Authorization: 'Bearer ' + token,
-				'Content-Type': [],
-			}),
+			headers: new HttpHeaders(headers),
 		}
 	}
 
