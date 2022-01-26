@@ -10,60 +10,76 @@
 				<div>
 					<div class="mail">
 						From:
-						<span class="underlined bold"
-							>Danatalemarathospital@gmail.com</span
-						>
+						<span class="underlined bold">{{
+							clinic.email || 'N/A'
+						}}</span>
 					</div>
-					<div class="clinic">Danat Al Emarat Hospital</div>
+					<div class="clinic bold green">{{ clinic.name }}</div>
 				</div>
 				<div class="ml-auto">
 					<span>
 						<span class="bold mr-2">Date</span>
-						<span class="mr-5">01-02-22</span>
+						<span class="mr-5">{{
+							clinic.createdAt | date: 'MMM dd, yyyy'
+						}}</span>
 					</span>
 					<span>
 						<span class="bold mr-2">Time</span>
-						<span class="mr-5">03:26 AM</span>
+						<span class="mr-5">{{
+							clinic.createdAt | date: 'hh:mm a'
+						}}</span>
 					</span>
 				</div>
 			</div>
 		</div>
 		<div class="card-body">
 			<div class="row">
-				<div class="col-md-4">
+				<div class="col-md-4 pr-5">
 					<div class="title">Clinic Name</div>
-					<div class="value">Aster Clinic</div>
+					<div class="value">{{ clinic.name }}</div>
 
 					<div class="title">Clinic Address</div>
 					<div class="value">
-						Millenium Tower Shiekh Zayed Rd Dubai UAE
+						{{ clinic.address }}
 					</div>
 
 					<div class="title">Email</div>
-					<div class="value">Asterclinic@gmail.com</div>
+					<div class="value">{{ clinic.email || 'N/A' }}</div>
 
 					<div class="title">Mobile No.</div>
-					<div class="value">Asterclinic@gmail.com</div>
+					<div class="value">{{ clinic.phones[0].phone }}</div>
 
 					<div class="title">User Name</div>
-					<div class="value">Aster Clinic Admin</div>
+					<div class="value">{{ clinic.username }}</div>
 				</div>
 				<div class="col-md-4">
 					<div class="title">Subscription</div>
 					<div class="value">Trial</div>
 
 					<div class="title">Users</div>
-					<div class="value">2</div>
+					<div class="value">{{ clinic.clinicAccounts.length }}</div>
 
-					<div class="title">Account #1</div>
-					<div class="value">John</div>
-
-					<div class="title">Account #2</div>
-					<div class="value">Jenny</div>
+					<div class="title">Accounts</div>
+					<div
+						*ngFor="
+							let user of clinic.clinicAccounts;
+							let i = index
+						"
+					>
+						<div class="value d-flex aic ml-3 mt-2 bold">
+							<i-feather
+								name="user"
+								class="mr-2 green"
+							></i-feather>
+							<span class="mt-2 green">{{ user.name }}</span>
+						</div>
+					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="title">Trade License No.</div>
-					<div class="value mb-5">234 324 342 4</div>
+					<div class="value mb-5">
+						{{ clinic.tradeLicenseNumber }}
+					</div>
 					<div class="underlined">
 						View Trade License
 

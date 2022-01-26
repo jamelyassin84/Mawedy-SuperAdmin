@@ -22,3 +22,10 @@ tr {
 			rgba(204, 200, 200, 0.3) 0px 18px 36px -18px inset;
 	}
 }
+
+td {
+	max-width: 150px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
