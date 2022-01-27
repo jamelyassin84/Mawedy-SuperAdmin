@@ -92,9 +92,34 @@
 						<i-feather name="chevron-right"></i-feather>
 					</a>
 				</div>
-				<div class="col-md-12 mt-5">
-					<div class="d-flex">
-						<button class="btn b ml-auto">Activate</button>
+				<div *ngIf="clinic.isApproved" class="col-md-12 d-flex">
+					<div class="ml-auto bold green">
+						<i-feather name="check" class="mr-2"></i-feather>
+						<span>Account Activated</span>
+					</div>
+				</div>
+				<div *ngIf="!clinic.isApproved" class="col-md-12">
+					<div
+						class="d-flex process"
+						[class.isProcessing]="isProcessing === true"
+					>
+						<button
+							#activateBtn
+							(click)="activate(clinic?.id)"
+							class="btn primary-button ml-auto isProcessing"
+						>
+							<span *ngIf="isProcessing === 'complete'"> </span>
+							<span *ngIf="!isProcessing">
+								Activate {{ clinic?.name }}</span
+							>
+
+							<div
+								style="color: var(--accent) !important"
+								*ngIf="isProcessing === true"
+								class="spinner-border"
+								role="status"
+							></div>
+						</button>
 					</div>
 				</div>
 			</div>

@@ -26,8 +26,8 @@ export class InboxComponent implements OnInit {
 	}
 
 	read(id: number | undefined) {
-		new BaseService(this.http, `${ROUTES.CLINICS}/${id}/read`)
-			.index()
+		new BaseService(this.http, `${ROUTES.CLINICS}/read`)
+			.create({ id: id })
 			.subscribe()
 	}
 }
