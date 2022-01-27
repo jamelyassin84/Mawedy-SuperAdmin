@@ -47,7 +47,7 @@ export interface ClinicDto extends DateInterface {
 
 	isRead: boolean
 
-	files: FormData[]
+	files: any
 
 	approver: AdminDto
 

@@ -11,22 +11,22 @@
 					<div class="mail">
 						From:
 						<span class="underlined bold">{{
-							clinic.email || 'N/A'
+							clinic?.email || 'N/A'
 						}}</span>
 					</div>
-					<div class="clinic bold green">{{ clinic.name }}</div>
+					<div class="clinic bold green">{{ clinic?.name }}</div>
 				</div>
 				<div class="ml-auto">
 					<span>
 						<span class="bold mr-2">Date</span>
 						<span class="mr-5">{{
-							clinic.createdAt | date: 'MMM dd, yyyy'
+							clinic?.createdAt | date: 'MMM dd, yyyy'
 						}}</span>
 					</span>
 					<span>
 						<span class="bold mr-2">Time</span>
 						<span class="mr-5">{{
-							clinic.createdAt | date: 'hh:mm a'
+							clinic?.createdAt | date: 'hh:mm a'
 						}}</span>
 					</span>
 				</div>
@@ -36,33 +36,32 @@
 			<div class="row">
 				<div class="col-md-4 pr-5">
 					<div class="title">Clinic Name</div>
-					<div class="value">{{ clinic.name }}</div>
+					<div class="value">{{ clinic?.name }}</div>
 
 					<div class="title">Clinic Address</div>
 					<div class="value">
-						{{ clinic.address }}
+						{{ clinic?.address }}
 					</div>
 
 					<div class="title">Email</div>
-					<div class="value">{{ clinic.email || 'N/A' }}</div>
+					<div class="value">{{ clinic?.email || 'N/A' }}</div>
 
 					<div class="title">Mobile No.</div>
-					<div class="value">{{ clinic.phones[0].phone }}</div>
+					<div class="value">{{ clinic?.phones[0].phone }}</div>
 
 					<div class="title">User Name</div>
-					<div class="value">{{ clinic.username }}</div>
+					<div class="value">{{ clinic?.username }}</div>
 				</div>
 				<div class="col-md-4">
 					<div class="title">Subscription</div>
 					<div class="value">Trial</div>
 
-					<div class="title">Users</div>
-					<div class="value">{{ clinic.clinicAccounts.length }}</div>
-
-					<div class="title">Accounts</div>
+					<div class="title">
+						Accounts {{ clinic?.clinicAccounts.length }}
+					</div>
 					<div
 						*ngFor="
-							let user of clinic.clinicAccounts;
+							let user of clinic?.clinicAccounts;
 							let i = index
 						"
 					>
@@ -71,22 +70,27 @@
 								name="user"
 								class="mr-2 green"
 							></i-feather>
-							<span class="mt-2 green">{{ user.name }}</span>
+							<span class="mt-2 green">{{ user?.name }}</span>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="title">Trade License No.</div>
-					<div class="value mb-5">
-						{{ clinic.tradeLicenseNumber }}
+					<div class="value mb-5 bold">
+						{{ clinic?.tradeLicenseNumber }}
 					</div>
-					<div class="underlined">
-						View Trade License
+					<div class="title">Trade License</div>
 
-						<span
-							><i-feather name="chevron-right"></i-feather
-						></span>
-					</div>
+					<a
+						target="_blank"
+						[href]="file.url"
+						role="button"
+						*ngFor="let file of clinic?.files"
+						class="file mt-2"
+					>
+						{{ file.name }}
+						<i-feather name="chevron-right"></i-feather>
+					</a>
 				</div>
 				<div class="col-md-12 mt-5">
 					<div class="d-flex">

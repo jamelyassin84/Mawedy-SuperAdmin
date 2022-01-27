@@ -21,6 +21,7 @@
 			</thead>
 			<tbody>
 				<tr
+					(click)="read(item.id)"
 					[routerLink]="'/home/message-details/' + item.clinic?.id"
 					[class.unread]="!item.isRead"
 					*ngFor="let item of inboxes; let i = index"

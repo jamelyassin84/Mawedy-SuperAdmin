@@ -28,3 +28,14 @@
 	font-size: 1.3rem;
 	color: var(--color2);
 }
+
+.file {
+	display: inline-block !important;
+	border-radius: 99px;
+	padding: 10px 20px;
+	background: var(--bg2);
+	color: var(--color1);
+	&:hover {
+		text-decoration: underline;
+	}
+}

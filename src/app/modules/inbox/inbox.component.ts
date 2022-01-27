@@ -24,4 +24,10 @@ export class InboxComponent implements OnInit {
 			.index()
 			.subscribe((data: AppInboxDto[]) => (this.inboxes = data))
 	}
+
+	read(id: number | undefined) {
+		new BaseService(this.http, `${ROUTES.CLINICS}/${id}/read`)
+			.index()
+			.subscribe()
+	}
 }
