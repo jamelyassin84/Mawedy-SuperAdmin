@@ -2,13 +2,13 @@
 <html id="html" theme="light" lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>Mawedy (Super Admin)</title>
+		<title>Mawedy | Administrator</title>
 		<base href="/" />
 		<meta
 			name="viewport"
 			content="width=device-width, initial-scale=1, shrink-to-fit=no"
 		/>
-		<link rel="icon" type="image/x-icon" href="favicon.ico" />
+		<link rel="icon" type="image/x-icon" href="./assets/app/logo.png" />
 		<link
 			rel="stylesheet"
 			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -22,17 +22,14 @@
 			crossorigin="anonymous"
 		/>
 		<script src="https://unpkg.com/feather-icons"></script>
-		<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.min.js"></script>
 	</head>
 	<body>
 		<script>
-			feather.replace()
 			function setTheme() {
 				if (
 					window.matchMedia &&
-					window.matchMedia('(prefers-color-scheme: dark)').matches &&
-					localStorage.getItem('user') === null
+					window.matchMedia('(prefers-color-scheme: dark)').matches
 				) {
 					document
 						.getElementById('html')

@@ -19,7 +19,7 @@
 
 .card-header {
 	background: transparent;
-	padding-bottom: 2rem;
+	padding-bottom: 1rem;
 	padding-top: 2rem;
 }
 
@@ -27,4 +27,51 @@
 	margin-top: 2rem;
 	font-size: 1.3rem;
 	color: var(--color2);
+}
+
+.file {
+	display: inline-block !important;
+	border-radius: 99px;
+	padding: 10px 20px;
+	background: var(--bg2);
+	color: var(--color1);
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.isProcessing {
+	.btn {
+		background: none !important;
+		border: none;
+		:focus {
+			outline: 0 !important;
+		}
+		.btn:focus {
+			outline: 0 !important;
+		}
+
+		button:focus {
+			outline: 0 !important;
+		}
+	}
+}
+.btn {
+	background: var(--accent);
+	span {
+		color: var(--bg1);
+	}
+	border-radius: 9999px;
+	font-size: 1.2rem;
+	height: 50px;
+	transition: 1.3s ease;
+	padding-left: 30px;
+	padding-right: 30px;
+	:focus {
+		outline: 0 !important;
+	}
+}
+
+.btn :active {
+	font-size: 0.95rem;
 }
