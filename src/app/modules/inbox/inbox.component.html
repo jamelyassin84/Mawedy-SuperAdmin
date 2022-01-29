@@ -32,7 +32,7 @@
 					<td>{{ item.clinic?.email || 'N/A' }}</td>
 					<td>For Approval</td>
 					<td>
-						{{ item.message }}
+						{{ item.message || 'N/A' }}
 					</td>
 					<td>{{ item.createdAt | date: 'MMM dd, yyyy' }}</td>
 					<td>{{ item.createdAt | date: 'hh:mm a' }}</td>
