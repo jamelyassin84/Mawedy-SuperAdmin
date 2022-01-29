@@ -116,3 +116,8 @@ footer {
 		width: 100%;
 	}
 }
+.btn.focus,
+.btn:focus {
+	outline: 0;
+	box-shadow: none !important;
+}
