@@ -75,7 +75,10 @@ footer {
 .btn {
 	background: var(--accent);
 	span {
-		color: var(--bg1);
+		color: white !important;
+		i-feather {
+			color: white !important;
+		}
 	}
 	border-radius: 9999px;
 	font-size: 1.2rem;

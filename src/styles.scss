@@ -56,7 +56,7 @@ html[theme='dark'] {
 	--active1: #c3cdde57;
 	--tabContainer: #0feb9e13;
 	--disabled: #cfdae81c;
-	* {
+	.content * {
 		color: var(--color2);
 	}
 	.active {
